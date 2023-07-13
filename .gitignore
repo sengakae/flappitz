@@ -1,0 +1,20 @@
+# Ignore specific subfolders in Unity project
+
+# Unity generated folders
+/Temp/
+/Library/
+/obj/
+/Logs/
+
+# Package Manager folder
+/Packages/
+
+# Unity project settings folder
+/ProjectSettings/
+
+# User-specific settings files
+UserSettings.asset
+EditorUserSettings.asset
+
+# Visual Studio Code specific folder
+/.vscode/
