@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PipeMoveScript : MonoBehaviour
+public class EnemyScript : MonoBehaviour
 {
     public float moveSpeed = 5;
     public float deadZone = -45;
@@ -18,6 +18,12 @@ public class PipeMoveScript : MonoBehaviour
         transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
 
         if (transform.position.x < deadZone) {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter(Collider collision) {
+        if (collision.CompareTag("Pellet")) {
             Destroy(gameObject);
         }
     }

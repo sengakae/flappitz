@@ -28,15 +28,14 @@ public class BirdScript : MonoBehaviour
             Vector3 targetPosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
             Vector2 direction = targetPosition - transform.position;
+            Vector3 spawnPosition = (Vector2)transform.position + direction.normalized * 5; 
 
-            GameObject newObject = Instantiate(pellet, transform.position, transform.rotation);
+            GameObject newPellet = Instantiate(pellet, spawnPosition, transform.rotation);
 
-            Rigidbody2D newObjectRigidbody = newObject.GetComponent<Rigidbody2D>();
-            newObjectRigidbody.velocity = direction.normalized * moveSpeed;
+            Rigidbody2D newPelletBody = newPellet.GetComponent<Rigidbody2D>();
+            newPelletBody.velocity = direction.normalized * moveSpeed;
 
-            Debug.Log(newObjectRigidbody.velocity);
-
-            Destroy(newObject, maxDistance / moveSpeed);
+            Destroy(newPellet, maxDistance / moveSpeed);
         }
     }
 

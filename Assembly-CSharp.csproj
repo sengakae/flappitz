@@ -42,6 +42,8 @@
      <Compile Include="Assets\BirdScript.cs" />
      <Compile Include="Assets\LogicScript.cs" />
      <Compile Include="Assets\PipeSpawnScript.cs" />
+     <Compile Include="Assets\EnemySpawnScript.cs" />
+     <Compile Include="Assets\EnemyScript.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.26f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
