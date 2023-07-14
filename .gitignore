@@ -12,6 +12,9 @@
 # Unity project settings folder
 /ProjectSettings/
 
+# Unity user settings folder
+/UserSettings/
+
 # User-specific settings files
 UserSettings.asset
 EditorUserSettings.asset
