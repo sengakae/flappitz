@@ -16,5 +16,8 @@
 UserSettings.asset
 EditorUserSettings.asset
 
+# .csproj files
+*.csproj
+
 # Visual Studio Code specific folder
 /.vscode/
