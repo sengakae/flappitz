@@ -34,9 +34,7 @@ public class PelletScript : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log("Collision entered: " + collision.gameObject.name);
-        Debug.Log("Enemy collider: " + enemyCollider.gameObject.name);
-        if (collision == enemyCollider) {
+        if (collision.gameObject.name.Contains(enemyCollider.gameObject.name)) {
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }
