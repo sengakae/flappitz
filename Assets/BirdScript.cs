@@ -40,6 +40,10 @@ public class BirdScript : MonoBehaviour
 
             Destroy(newPellet, maxDistance / pelletScript.GetPelletSpeed());
         }
+        if (transform.position.y <= -14.6 || transform.position.y >= 14.8) {
+            logic.gameOver();
+            birdAlive = false;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {

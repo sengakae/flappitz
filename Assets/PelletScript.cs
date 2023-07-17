@@ -9,6 +9,7 @@ public class PelletScript : MonoBehaviour
     private float maxDistance;
     private Collider2D enemyCollider;
     private Rigidbody2D pelletRigidbody;
+    public LogicScript logic;
     public void Initialize(Vector2 dir, float distance, Collider2D enemyCol) {
         direction = dir;
         maxDistance = distance;
@@ -24,7 +25,7 @@ public class PelletScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
     // Update is called once per frame
@@ -34,9 +35,10 @@ public class PelletScript : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.name.Contains(enemyCollider.gameObject.name)) {
+        if (collision.CompareTag("Enemy")) {
             Destroy(gameObject);
             Destroy(collision.gameObject);
+            logic.addScore(5);
         }
     }
 }
