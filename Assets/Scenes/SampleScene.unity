@@ -706,7 +706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -724.6, y: 377.7}
+  m_AnchoredPosition: {x: -724.6, y: 315}
   m_SizeDelta: {x: 420.1, y: 269.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1007506008
@@ -828,7 +828,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484096339}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.77, y: -0.63, z: -26.386532}
+  m_LocalPosition: {x: 38.5, y: -0.63, z: -26.386532}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -972,6 +972,7 @@ MonoBehaviour:
   pellet: {fileID: 1665858120520796696, guid: c7268f5856d8f1b4c894915646db3c23, type: 3}
   moveSpeed: 20
   maxDistance: 50
+  enemyBird: {fileID: 1083167858030815384, guid: 1f0a06b30c5d4524caf5f7677b3cfa25, type: 3}
 --- !u!58 &1556207364
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1164,7 +1165,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849977236}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.25, y: 0.01, z: -0.59414816}
+  m_LocalPosition: {x: 39.05, y: 0.01, z: -0.59414816}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
