@@ -11,6 +11,7 @@ public class BirdScript : MonoBehaviour
     public GameObject pellet;
     public float moveSpeed = 20;
     public float maxDistance = 50;
+    public GameObject enemyBird;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class BirdScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!!Input.GetKeyDown(KeyCode.Space) && !!birdAlive) {
+        if (Input.GetKeyDown(KeyCode.Space) && birdAlive) {
             rigidBody.velocity = Vector2.up * flapStrength; 
         }
         if (Input.GetMouseButtonDown(0)) {
@@ -32,10 +33,12 @@ public class BirdScript : MonoBehaviour
 
             GameObject newPellet = Instantiate(pellet, spawnPosition, transform.rotation);
 
-            Rigidbody2D newPelletBody = newPellet.GetComponent<Rigidbody2D>();
-            newPelletBody.velocity = direction.normalized * moveSpeed;
+            Collider2D enemyCollider = enemyBird.GetComponent<Collider2D>();
 
-            Destroy(newPellet, maxDistance / moveSpeed);
+            PelletScript pelletScript = newPellet.GetComponent<PelletScript>();
+            pelletScript.Initialize(direction.normalized, maxDistance, enemyCollider);
+
+            Destroy(newPellet, maxDistance / pelletScript.GetPelletSpeed());
         }
     }
 

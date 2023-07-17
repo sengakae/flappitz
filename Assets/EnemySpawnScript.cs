@@ -11,14 +11,12 @@ public class EnemySpawnScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("gameObject.CompareTag(\"Pellet\") = " + gameObject.CompareTag("Pellet"));
-
         if (timer < spawnRate) {
             timer += Time.deltaTime;
         } else {
