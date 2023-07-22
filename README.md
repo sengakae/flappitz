@@ -1,5 +1,9 @@
 ## flappitz
 
-Initial Unity project. Basically my playground to test around in. 
+Flappy Bird with bullets.
 
-Game is Flappy Bird with bullets.
+Enemy birds will shoot and kill you.
+
+Passing through a set of pipes = 1 point.
+
+Killing an enemy bird = 5 points.
