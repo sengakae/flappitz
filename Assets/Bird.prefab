@@ -119,7 +119,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.09, y: -0.41}
@@ -138,12 +138,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 5156986143362722059}
-  flapStrength: 10
+  flapStrength: 15
   logic: {fileID: 0}
   birdAlive: 1
   pellet: {fileID: 1665858120520796696, guid: c7268f5856d8f1b4c894915646db3c23, type: 3}
   moveSpeed: 20
-  maxDistance: 50
+  maxDistance: 5
   enemyBird: {fileID: 1083167858030815384, guid: 1f0a06b30c5d4524caf5f7677b3cfa25, type: 3}
 --- !u!1 &5156986143399991932
 GameObject:

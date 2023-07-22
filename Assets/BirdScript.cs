@@ -5,7 +5,7 @@ using UnityEngine;
 public class BirdScript : MonoBehaviour
 {
     public Rigidbody2D rigidBody;
-    public float flapStrength;
+    public float flapStrength = 15;
     public LogicScript logic;
     public bool birdAlive = true;
     public GameObject pellet;
@@ -37,7 +37,6 @@ public class BirdScript : MonoBehaviour
 
             PelletScript pelletScript = newPellet.GetComponent<PelletScript>();
             pelletScript.Initialize(direction.normalized, maxDistance, enemyCollider);
-
             Destroy(newPellet, maxDistance / pelletScript.GetPelletSpeed());
         }
         if (transform.position.y <= -16.6 || transform.position.y >= 16.8) {

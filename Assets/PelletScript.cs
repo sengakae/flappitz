@@ -17,7 +17,7 @@ public class PelletScript : MonoBehaviour
         enemyCollider = enemyCol;
 
         pelletRigidbody = GetComponent<Rigidbody2D>();
-        pelletRigidbody.velocity = direction.normalized * moveSpeed;
+        pelletRigidbody.velocity = direction.normalized * moveSpeed * 10;
     }
     public float GetPelletSpeed() {
         return moveSpeed;
@@ -31,7 +31,7 @@ public class PelletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(direction * moveSpeed * Time.fixedDeltaTime);
+        transform.Translate(direction * moveSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
