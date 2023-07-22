@@ -5,7 +5,7 @@ using UnityEngine;
 public class PelletScript : MonoBehaviour
 {
     private Vector2 direction;
-    private float moveSpeed = 2;
+    private float moveSpeed = 20;
     private float maxDistance;
     private Collider2D enemyCollider;
     private Rigidbody2D pelletRigidbody;
@@ -17,7 +17,7 @@ public class PelletScript : MonoBehaviour
         enemyCollider = enemyCol;
 
         pelletRigidbody = GetComponent<Rigidbody2D>();
-        pelletRigidbody.velocity = direction.normalized * moveSpeed * 10;
+        pelletRigidbody.velocity = direction.normalized * moveSpeed;
     }
     public float GetPelletSpeed() {
         return moveSpeed;
@@ -31,7 +31,11 @@ public class PelletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(direction * moveSpeed * Time.deltaTime);
+
+    }
+
+    private void FixedUpdate() {
+        transform.Translate(direction * moveSpeed * Time.fixedDeltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

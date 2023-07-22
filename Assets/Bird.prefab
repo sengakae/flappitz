@@ -143,7 +143,7 @@ MonoBehaviour:
   birdAlive: 1
   pellet: {fileID: 1665858120520796696, guid: c7268f5856d8f1b4c894915646db3c23, type: 3}
   moveSpeed: 20
-  maxDistance: 5
+  maxDistance: 30
   enemyBird: {fileID: 1083167858030815384, guid: 1f0a06b30c5d4524caf5f7677b3cfa25, type: 3}
 --- !u!1 &5156986143399991932
 GameObject:

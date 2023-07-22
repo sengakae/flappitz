@@ -10,7 +10,7 @@ public class BirdScript : MonoBehaviour
     public bool birdAlive = true;
     public GameObject pellet;
     public float moveSpeed = 20;
-    public float maxDistance = 5;
+    public float maxDistance = 30;
     public GameObject enemyBird;
     // Start is called before the first frame update
     void Start()
