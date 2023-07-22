@@ -10,6 +10,7 @@ public class PelletScript : MonoBehaviour
     private Collider2D enemyCollider;
     private Rigidbody2D pelletRigidbody;
     public LogicScript logic;
+    public bool birdAlive = true;
     public void Initialize(Vector2 dir, float distance, Collider2D enemyCol) {
         direction = dir;
         maxDistance = distance;
@@ -18,7 +19,6 @@ public class PelletScript : MonoBehaviour
         pelletRigidbody = GetComponent<Rigidbody2D>();
         pelletRigidbody.velocity = direction.normalized * moveSpeed;
     }
-
     public float GetPelletSpeed() {
         return moveSpeed;
     }
@@ -35,10 +35,15 @@ public class PelletScript : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.CompareTag("Enemy")) {
+        if (enemyCollider.CompareTag(collision.tag)) {
             Destroy(gameObject);
             Destroy(collision.gameObject);
-            logic.addScore(5);
+            if (enemyCollider.tag == "Enemy") { 
+                logic.addScore(5);
+            } else if (enemyCollider.tag == "Player") {
+                logic.gameOver();
+                birdAlive = false;
+            }
         }
     }
 }

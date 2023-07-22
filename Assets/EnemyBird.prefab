@@ -117,6 +117,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   deadZone: -45
+  maxDistance: 50
+  pelletCooldown: 2
+  pelletTime: 0
+  pellet: {fileID: 1665858120520796696, guid: c7268f5856d8f1b4c894915646db3c23, type: 3}
+  bird: {fileID: 5156986143362722060, guid: 8b79aab45bdc863499ecab915cd6e0ff, type: 3}
 --- !u!50 &6284350999327441052
 Rigidbody2D:
   serializedVersion: 4
