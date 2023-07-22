@@ -34,10 +34,6 @@ public class PelletScript : MonoBehaviour
 
     }
 
-    private void FixedUpdate() {
-        transform.Translate(direction * moveSpeed * Time.fixedDeltaTime);
-    }
-
     private void OnTriggerEnter2D(Collider2D collision) {
         if (enemyCollider.CompareTag(collision.tag)) {
             Destroy(gameObject);
