@@ -28,7 +28,7 @@ public class EnemyScript : MonoBehaviour
         
         pelletTime += Time.deltaTime;
         if (pelletTime >= pelletCooldown) {
-            Vector2 randomAngle = Random.insideUnitCircle.normalized;
+            Vector2 randomAngle = (bird.transform.position - transform.position).normalized;
             Vector2 spawnPosition = (Vector2)transform.position + randomAngle * 5; 
             GameObject newPellet = Instantiate(pellet, spawnPosition, transform.rotation);
 
